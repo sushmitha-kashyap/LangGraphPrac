@@ -7,6 +7,11 @@ from langgraph.graph.message import add_messages
 from langgraph.checkpoint.sqlite import SqliteSaver
 import sqlite3
 import os
+from langgraph.prebuilt import ToolNode,tools_condition
+from langchain_community.tools import DuckDuckGoSearchRun
+from langchain_core.tools import tool
+import requests
+import random
 
 os.environ['LANGCHAIN_PROJECT'] = 'ChatBot_Project'
 
